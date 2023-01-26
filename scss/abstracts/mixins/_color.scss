@@ -1,0 +1,9 @@
+//Sass mixin function that allows to use HSL colors
+@mixin hsl($hue, $saturation, $lightness) {
+    color: hsl($hue, $saturation, $lightness);
+}
+  
+
+@mixin hsl-with-variable-lightness($lightness) {
+    color: hsl(240,100%, $lightness);
+}

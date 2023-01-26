@@ -1,0 +1,19 @@
+/// This file is responsible for display info about the framework
+
+$charset: "UTF-8";
+$version: "1.0.0";
+$framework: Frontola;
+
+
+
+@mixin display-info {
+    @at-root {
+        @charset #{$charset};
+    }
+
+    /*!
+     * #{$framework} v#{$version} (https://codetrait.com/frontola/)
+     * Copyright 2013-2024 The #{$framework} Authors
+     * Licensed under GNU (https://github.com/Seance1723/Frontora/blob/main/LICENSE)
+     */
+}
