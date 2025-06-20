@@ -16,6 +16,7 @@
 
 // Components
 @import 'components/buttons';
+@import 'components/badge';
 @import 'components/carousel';
 @import 'components/cover';
 @import 'components/dropdown';
@@ -23,10 +24,12 @@
 @import 'components/accordion';
 @import 'components/alert';
 @import 'components/progress';
+@import 'components/toast';
 
 // Layout
 @import 'layout/navigation';
 @import 'layout/grid';
+@import 'layout/containers';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Frontora Demo</title>
     <link href="css/frontora.css" rel="stylesheet">
-    <!-- Optional GSAP animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   </head>
   <body>
     <nav class="fr-navbar">
-      <a href="#" class="brand">Frontora</a>
+      <a href="#" class="brand">Frontora <span class="fr-badge fr-badge-info">v1</span></a>
       <div class="fr-dropdown">
         <button class="cta cta-primary fr-dropdown-toggle">Menu</button>
         <div class="fr-dropdown-menu">
@@ -20,11 +19,11 @@
       </div>
     </nav>
 
-    <header>
+    <header class="fr-mb-2">
       <h1>Welcome to Frontora</h1>
     </header>
 
-    <div class="fr-container">
+    <div class="fr-container-md">
       <div class="fr-alert fr-alert-success">
         This is a success alert
         <button class="fr-alert-close">&times;</button>
@@ -32,11 +31,11 @@
       <div class="fr-progress fr-progress-primary fr-mb-2">
         <div class="fr-progress-bar" style="width: 60%"></div>
       </div>
-      <div class="fr-row">
-        <div class="fr-col-6">
+      <div class="fr-row fr-g-2">
+        <div class="fr-col-12 fr-col-md-6">
           <button class="cta cta-secondary" data-modal="#demoModal">Open Modal</button>
         </div>
-        <div class="fr-col-6">
+        <div class="fr-col-12 fr-col-md-6">
           <p>This grid column is responsive.</p>
         </div>
       </div>
@@ -56,10 +55,15 @@
       </div>
     </div>
 
-    <footer>
+    <div id="demoToast" class="fr-toast">Hello from Frontora!</div>
+
+    <footer class="fr-mt-3">
       <p>© 2024 Frontora Framework</p>
     </footer>
 
     <script src="js/frontora.js"></script>
+    <script>
+      frShowToast('#demoToast');
+    </script>
   </body>
 </html>

@@ -1,13 +1,6 @@
 # Frontora
 
-Frontora is a lightweight responsive frontend framework built with SCSS.
-It provides a simple grid system, UI components and JavaScript helpers for
-dropdowns, modals and accordions. Utility classes are available for spacing
-and colors with the `fr-` prefix. Optional GSAP support is included for
-smooth animations.
-
-Additional components include alerts and progress bars with simple helper
-functions.
+Frontora is a lightweight and unique SCSS framework for building responsive interfaces. It ships with a flexible grid, utility classes and small JavaScript modules. Each interactive element has its own script but a `frontora.js` bundle is also provided for convenience.
 
 ## Getting Started
 
@@ -18,15 +11,19 @@ npm install
 npx sass scss/frontora.scss site/css/frontora.css
 ```
 
-To enable animated dropdowns, modals and accordions include the GSAP script
-before `frontora.js`:
+Include the optional GSAP script before the Frontora bundle if you want animated transitions:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="js/frontora.js"></script>
 ```
 
-Use `frSetProgress('#myProgress', 75)` to animate a progress bar and include
-`fr-alert-close` buttons to dismiss alerts.
+If you only need specific behaviour you can instead include the individual modules from `js/modules`.
 
-Open `site/index.html` in your browser to see a demo.
+### Helpers
+
+- `frSetProgress('#myProgress', 80)` – update progress bars
+- `frShowToast('#myToast')` – display toast notifications
+- `frInitDropdowns()` etc. – manually initialise components if needed
+
+Open `site/index.html` to see a small demo of the framework.

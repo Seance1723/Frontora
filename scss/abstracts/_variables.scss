@@ -1,6 +1,17 @@
 // Spacing unit for utilities
 $spacing-unit: 0.5rem;
 
+// Default gutters for grid
+$gutter: 1rem !default;
+
+// Breakpoints map for mixins
+$fr-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
 // Frontora colors
 $primary: #7016d0;
 $secondary: #aca4bc;

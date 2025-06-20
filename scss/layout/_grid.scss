@@ -2,28 +2,54 @@
 .fr-row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
 }
 
-[class^="fr-col-"] {
-  padding: 0.5rem;
-  flex: 1 0 0%;
+.fr-row > [class*="fr-col"] {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
-.fr-col-1 { width: 8.333%; }
-.fr-col-2 { width: 16.666%; }
-.fr-col-3 { width: 25%; }
-.fr-col-4 { width: 33.333%; }
-.fr-col-5 { width: 41.666%; }
-.fr-col-6 { width: 50%; }
-.fr-col-7 { width: 58.333%; }
-.fr-col-8 { width: 66.666%; }
-.fr-col-9 { width: 75%; }
-.fr-col-10 { width: 83.333%; }
-.fr-col-11 { width: 91.666%; }
-.fr-col-12 { width: 100%; }
+@mixin fr-col($size) {
+  flex-basis: percentage($size / 12);
+  max-width: percentage($size / 12);
+}
 
-@media (max-width: 600px) {
-  .fr-row > [class^="fr-col-"] {
-    flex-basis: 100%;
+@for $i from 1 through 12 {
+  .fr-col-#{$i} { @include fr-col($i); }
+}
+
+@each $bp, $dim in $fr-breakpoints {
+  @for $i from 1 through 12 {
+    .fr-col-#{$bp}-#{$i} {
+      @include fr-media($bp) {
+        @include fr-col($i);
+      }
+    }
+  }
+}
+
+@for $i from 1 through 6 {
+  .fr-row-cols-#{$i} > [class*="fr-col"] {
+    flex: 0 0 percentage(1/$i);
+    max-width: percentage(1/$i);
+  }
+}
+
+@for $i from 0 through 5 {
+  .fr-g-#{$i} > [class*="fr-col"] {
+    padding-left: $spacing-unit * $i;
+    padding-right: $spacing-unit * $i;
+  }
+  @each $bp, $dim in $fr-breakpoints {
+    .fr-g-#{$bp}-#{$i} > [class*="fr-col"] {
+      @include fr-media($bp) {
+        padding-left: $spacing-unit * $i;
+        padding-right: $spacing-unit * $i;
+      }
+    }
   }
 }

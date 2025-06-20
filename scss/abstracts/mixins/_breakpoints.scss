@@ -1,0 +1,10 @@
+@mixin fr-media($breakpoint) {
+  $size: map-get($fr-breakpoints, $breakpoint);
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

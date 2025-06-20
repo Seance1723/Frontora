@@ -9,12 +9,14 @@
   text-decoration: none;
 }
 
-.cta-primary {
-  background: $primary;
-  color: #fff;
+@mixin fr-cta-variant($name, $color) {
+  .cta-#{$name} {
+    background: $color;
+    color: #fff;
+    &:hover { background: darken($color, 5%); }
+  }
 }
 
-.cta-secondary {
-  background: $secondary;
-  color: #fff;
+@each $n, $c in $theme-color {
+  @include fr-cta-variant($n, $c);
 }
