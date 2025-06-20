@@ -1,0 +1,14 @@
+/* Carousel (basic) */
+.fr-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.fr-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.fr-carousel-item {
+  min-width: 100%;
+}

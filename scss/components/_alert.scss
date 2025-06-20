@@ -1,0 +1,25 @@
+/* Alerts */
+.fr-alert {
+  padding: $spacing-unit * 2;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.fr-alert-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@each $name, $color in $theme-color {
+  .fr-alert-#{$name} {
+    background-color: lighten($color, 40%);
+    border-color: $color;
+    color: $color;
+  }
+}

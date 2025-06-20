@@ -1,0 +1,42 @@
+/* Utilities */
+.fr-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.fr-text-center {
+  text-align: center;
+}
+
+.fr-flex {
+  display: flex;
+}
+
+.fr-column {
+  flex-direction: column;
+}
+
+// Spacing utilities
+@for $i from 0 through 5 {
+  .fr-m-#{$i} { margin: $i * $spacing-unit !important; }
+  .fr-mt-#{$i} { margin-top: $i * $spacing-unit !important; }
+  .fr-mr-#{$i} { margin-right: $i * $spacing-unit !important; }
+  .fr-mb-#{$i} { margin-bottom: $i * $spacing-unit !important; }
+  .fr-ml-#{$i} { margin-left: $i * $spacing-unit !important; }
+
+  .fr-p-#{$i} { padding: $i * $spacing-unit !important; }
+  .fr-pt-#{$i} { padding-top: $i * $spacing-unit !important; }
+  .fr-pr-#{$i} { padding-right: $i * $spacing-unit !important; }
+  .fr-pb-#{$i} { padding-bottom: $i * $spacing-unit !important; }
+  .fr-pl-#{$i} { padding-left: $i * $spacing-unit !important; }
+}
+
+// Color utilities
+@each $name, $color in $theme-color {
+  .fr-text-#{$name} { color: $color !important; }
+  .fr-bg-#{$name} { background-color: $color !important; }
+}
+
+.fr-hidden { display: none !important; }
+.fr-block { display: block !important; }

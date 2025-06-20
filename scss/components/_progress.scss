@@ -1,0 +1,19 @@
+/* Progress */
+.fr-progress {
+  background: $light;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 1rem;
+}
+
+.fr-progress-bar {
+  height: 100%;
+  width: 0;
+  background: $primary;
+}
+
+@each $name, $color in $theme-color {
+  .fr-progress-#{$name} .fr-progress-bar {
+    background: $color;
+  }
+}

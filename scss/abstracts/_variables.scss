@@ -1,8 +1,7 @@
+// Spacing unit for utilities
+$spacing-unit: 0.5rem;
 
-
-
-
-//Frontola colors
+// Frontora colors
 $primary: #7016d0;
 $secondary: #aca4bc;
 $success: #28c86d;
@@ -13,12 +12,12 @@ $gray: #495057;
 $light: #dee2e6;
 
 $theme-color: (
-    $primary: #7016d0,
-    $secondary: #aca4bc,
-    $success: #28c86d,
-    $danger: #ea5455,
-    $warning: #ff9f43,
-    $info: #08b1ba,
-    $gray: #495057,
-    $light: #dee2e6
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'danger': $danger,
+  'warning': $warning,
+  'info': $info,
+  'gray': $gray,
+  'light': $light
 ) !default;

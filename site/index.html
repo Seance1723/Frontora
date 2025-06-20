@@ -5,9 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Frontora Demo</title>
     <link href="css/frontora.css" rel="stylesheet">
+    <!-- Optional GSAP animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <script src="#"></script>
+    <nav class="fr-navbar">
+      <a href="#" class="brand">Frontora</a>
+      <div class="fr-dropdown">
+        <button class="cta cta-primary fr-dropdown-toggle">Menu</button>
+        <div class="fr-dropdown-menu">
+          <a href="#">Action</a>
+          <a href="#">Another action</a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Welcome to Frontora</h1>
+    </header>
+
+    <div class="fr-container">
+      <div class="fr-alert fr-alert-success">
+        This is a success alert
+        <button class="fr-alert-close">&times;</button>
+      </div>
+      <div class="fr-progress fr-progress-primary fr-mb-2">
+        <div class="fr-progress-bar" style="width: 60%"></div>
+      </div>
+      <div class="fr-row">
+        <div class="fr-col-6">
+          <button class="cta cta-secondary" data-modal="#demoModal">Open Modal</button>
+        </div>
+        <div class="fr-col-6">
+          <p>This grid column is responsive.</p>
+        </div>
+      </div>
+
+      <div class="fr-accordion-item fr-mt-2">
+        <div class="fr-accordion-header">Accordion Header</div>
+        <div class="fr-accordion-content">
+          <p class="fr-m-1">Hidden content revealed on click.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="demoModal" class="fr-modal">
+      <div class="fr-modal-content">
+        <h2>Modal Title</h2>
+        <p>This is a simple modal powered by Frontora.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2024 Frontora Framework</p>
+    </footer>
+
+    <script src="js/frontora.js"></script>
   </body>
 </html>

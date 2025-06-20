@@ -1,0 +1,15 @@
+/* Navigation */
+.fr-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primary;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.fr-navbar a {
+  color: inherit;
+  margin-right: 1rem;
+  text-decoration: none;
+}

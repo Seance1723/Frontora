@@ -1,0 +1,20 @@
+/* Accordion */
+.fr-accordion-item {
+  border: 1px solid $gray;
+  margin-bottom: $spacing-unit;
+}
+
+.fr-accordion-header {
+  padding: $spacing-unit $spacing-unit * 2;
+  background: $light;
+  cursor: pointer;
+}
+
+.fr-accordion-content {
+  display: none;
+  padding: $spacing-unit * 2;
+}
+
+.fr-accordion-item.active .fr-accordion-content {
+  display: block;
+}

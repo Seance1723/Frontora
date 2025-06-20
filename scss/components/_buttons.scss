@@ -1,0 +1,20 @@
+/* Buttons */
+.cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+}
+
+.cta-primary {
+  background: $primary;
+  color: #fff;
+}
+
+.cta-secondary {
+  background: $secondary;
+  color: #fff;
+}
